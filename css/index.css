@@ -22,10 +22,10 @@ html {
  /* 헤더---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
         header {
             position: fixed; 
-            top: 40px; 
+            top: 2rem; 
             left: 50%; 
             transform: translateX(-50%); 
-            padding: 12px 40px; 
+            padding: 0.8rem 2rem; 
             
             background: rgba(255, 255, 255, 0.15); 
             backdrop-filter: blur(12px); 
@@ -50,13 +50,13 @@ html {
         }
 
         header nav ul li {
-            margin: 0 18px; 
+            margin: 0 0.8rem; 
         }
 
         header nav ul li a {
             text-decoration: none;
             color: #2D2928; 
-            font-size: 13px;
+            font-size: 0.8rem;
             font-weight: 500;
             letter-spacing: 0.5px;
             transition: color 0.3s;
@@ -69,7 +69,7 @@ html {
 
 .hero{
     height: 100vh;
-    min-height: 700px;
+    min-height: 30rem;
     margin-top: 12rem;
     
 
@@ -208,12 +208,12 @@ button img{
 .grid-text li{
     font-weight: 600;
     color: #2D2928;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .grid-text li p{
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .lace-style {
@@ -231,7 +231,7 @@ button img{
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(20px, 1fr));
-    gap: 40px 2rem;
+    gap: 2rem 2rem;
     padding: 2rem 10rem;
     background-color: #ffffff;
 }
@@ -247,7 +247,7 @@ button img{
         .skill-card {
             display: flex;
             align-items: flex-start;
-            gap: 15px; 
+            gap: 0.8rem; 
         }
 
         /* 텍스트 컨텐츠 영역 */
@@ -287,7 +287,7 @@ button img{
 
         .skill-details p {
             font-size: 0.85rem;
-            color: #555;
+            color: #2D2928;
             line-height: 1.6;
             letter-spacing: -0.5px;
         }
@@ -351,7 +351,6 @@ button img{
             border-radius: 50px;
             padding: 1rem 4rem; 
             color: #2D2928; 
-            font-family: 'Montserrat', sans-serif;
             font-size: 0.85rem; 
             font-weight: 600; 
             letter-spacing: 0.5px;
@@ -466,9 +465,8 @@ button img{
             font-size: 2.5rem; 
             color: #BE3734; }
         
-        /* 개별 폰트 적용 */
+        
         .preview-alex { font-family: 'Alex Brush', cursive; font-size: 3.5rem; } 
-        .preview-angkor { font-family: 'Angkor', serif; }
         .preview-suit { font-family: 'SUIT', sans-serif; color: #2D2928; font-weight: 500; }
         
         /* 선 및 끝의 동그라미(점)*/
@@ -494,7 +492,7 @@ button img{
             font-weight: bold;
              font-size: 1.1rem; 
              color: #2D2928; 
-             font-family: 'Montserrat', sans-serif; }
+             }
         .font-desc { 
             width: 280px; 
             font-size: 0.85rem;
@@ -565,19 +563,19 @@ button img{
             padding-left: 6rem;
         }
 
-         .intro-box {
-            padding: 2.5rem 6rem;
-            margin-bottom: 5rem;
-            position: relative; 
-            z-index: 1; 
-        }
+       .intro-box {
+
+        margin-bottom: 5rem;
+        position: relative;
+        z-index: 1;
+    }
 
 
         .intro-box p {
             color: #2D2928;
-            font-size: 0.95rem;
+            font-size: 1.25rem;
             line-height: 1.8;
-            font-weight: 500;
+            font-weight: 400;
         }
         
         .portfolio-info {
@@ -630,12 +628,11 @@ button img{
       .kp-popup-showcase__header-title {
         font-size: 6rem;
         color: #BE3734;
-        margin-top: 10rem;
+
 }
         .kp-popup-showcase__header-description {
             font-size: 1.25rem;
-            color: #777;
-            max-width: 500px;
+            color: #2D2928;
             margin-left: auto;
             margin-top: 1rem;
             line-height: 1.6;
@@ -662,8 +659,8 @@ button img{
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 40px;
-            margin-top: 200px; 
+            gap: 2rem;
+            margin: 15rem 0;
         }
 
         
@@ -674,7 +671,7 @@ button img{
             text-align: center;
         }
         .kp-popup-showcase__info-number {
-            font-size: 20px;
+            font-size: 1rem;
             font-weight: 700;
             color: #d1303c;
             margin-bottom: 20px;
@@ -684,14 +681,14 @@ button img{
             padding: 3rem;
         }
         .kp-popup-showcase__info-title {
-            font-size: 24px;
+            font-size: 1.2rem;
             font-weight: 700;
-            color: #333;
-            margin-bottom: 30px;
+            color: #2D2928;
+            margin-bottom: 1.5rem;
         }
         .kp-popup-showcase__info-description {
-            font-size: 15px;
-            color: #666;
+            font-size: 1rem;
+            color: #2D2928;
             line-height: 1.8;
             word-break: keep-all;
             text-align: left; 
@@ -705,7 +702,7 @@ button img{
         }
         .kp-popup-showcase__slider-wrapper {
             display: flex;
-            gap: 20px;
+            gap: 1rem;
 
             
             animation: slideAuto 15s linear infinite;
@@ -733,51 +730,6 @@ button img{
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-280px * 2 - 40px)); } 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         /* 포스터 이미지 영역 -----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -896,7 +848,7 @@ button img{
       align-items: center;
       justify-content: center;
       border-radius: 18px;
-      font-size: 22px;
+      font-size: 1.2rem;
       font-weight: bold;
       color: #fff;
       
@@ -908,9 +860,9 @@ button img{
     position: absolute;
     left: 70%;
     bottom: 25%;
-    width: 280px;
+    width: 400px;
     height: 400px;
-    padding: 20px;
+    padding: 1rem;
     background: linear-gradient( 135deg, rgba(255, 255, 255, 0.4) 0%,rgba(255, 255, 255, 0.05) 100%);
     backdrop-filter: blur(3px) saturate(150%);
     -webkit-backdrop-filter: blur(16px) saturate(150%);
@@ -933,14 +885,14 @@ button img{
     .glass-box h3 {
       margin: 0 0 10px 0;
       font-size: 1.25rem;
-      color: #111;
+      color: #2D2928;
       text-shadow: 0 1px 2px rgba(255,255,255,0.8); 
     }
 
     .glass-box p {
         margin: 0;
-        font-size: 13px;
-        color: #333;
+        font-size: 1rem;
+        color: #2D2928;
         line-height: 1.6;
     }
             
@@ -962,20 +914,22 @@ button img{
 .banner-container {
     
 }
-.bncontent-section {
+/* .bncontent-section {
     display: flex;
     align-items: center;
     gap: 20rem;
     margin-bottom: 10rem;
     
+} */
+.banner-container .content-text-container{
+    text-align: end;
 }
-
 .sh {
-    margin-bottom: 40px; 
+    margin-bottom: 2rem; 
 }
 
 .line {
-    margin-bottom: 10px; /* 숫자와의 간격 */
+    margin-bottom: 0.5rem; 
 }
 
 .number {
@@ -1004,27 +958,26 @@ button img{
     margin-left: 10rem;
 }
 
-
 .content-text-container {
-    flex: 1; 
+    margin-bottom: 10rem;
+    flex: 1;
 }
-
 .title {
     font-size: 6rem;
     color: #BE3734;
-    margin-bottom: 20px;
-    margin-top: 10rem;
+    margin-bottom: 1rem;
+    
 }
 
 .paragraph {
     font-size: 1.25rem;
-    color: #333;
+    color: #2D2928;
     white-space: pre-line; 
 }
 
 .description{
     font-size: 1.25rem;
-    color: #777;
+    color: #2D2928;
     line-height: 1.6;
 }
 
@@ -1035,7 +988,7 @@ button img{
     text-align: start;
     color: #BE3734;
     font-size: 6rem;
-    margin-left: 6rem;
+   
 }
 
 
@@ -1045,7 +998,7 @@ button img{
     gap: 1rem;
     width: 100%;
     max-width: 1800px;
-    margin: 40px auto 20rem;
+    margin: 2rem auto 20rem;
 }
 
 .detail-card a {
@@ -1058,7 +1011,7 @@ button img{
 .detail-card figure {
     width: 100%;
     aspect-ratio: 1 / 1.1; 
-    margin: 0 0 16px 0;
+    margin: 0 0 0.6rem 0;
     border-radius: 12px;
     overflow: hidden;
     position: relative; 
@@ -1067,7 +1020,7 @@ button img{
    
     aspect-ratio: 9 / 16; 
     
-    margin: 0 0 16px 0;
+    margin: 0 0 0.6rem 0;
     border-radius: 12px;
     overflow: hidden;
     position: relative; 
@@ -1110,8 +1063,8 @@ button img{
 
 
 .detail-card h4 {
-    margin: 0 0 8px 0;
-    font-size: 0.95rem;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.8rem;
     color: #555;
     font-weight: 500;
 }
@@ -1132,7 +1085,7 @@ button img{
 }
 
 .detail h2+p{
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
 }
 .detail h2+p+p{
     margin-bottom: 3rem;
@@ -1266,13 +1219,13 @@ button img{
 
 /* 기본 버튼 스타일 */
 .web-custom-btn {
-  padding: 15px 50px; 
+  padding: 0.6rem 2.5rem; 
   min-width: 150px; 
   border-radius: 50px; 
   border: 1px solid #2D2928; 
   background-color: #ECF6F7; 
   color: #2D2928; 
-  font-size: 16px;
+  font-size: 0.8rem;
   font-weight: bold; 
   cursor: pointer; 
   transition: all 0.3s ease; 
@@ -1283,6 +1236,9 @@ button img{
   background-color: #BE3734; 
   color: #ffffff; 
   border-color: #BE3734; 
+}
+.web-design-container .text-box{
+    text-align: end;
 }
 
 /* 킾------------------------------- */
@@ -1324,6 +1280,7 @@ button img{
     margin-top: 1rem;
     margin-bottom: 0.25rem;
     text-transform: capitalize;
+    color: #2D2928;
 }
 .mo{display: none;}
 .pc{display: block;}
@@ -1348,6 +1305,7 @@ button img{
     font-size:3rem;
     font-weight: 700;
     margin-bottom: 3rem;
+    color: #2D2928;
 }
 .project-content h4+p{
     margin-bottom: 1.5rem;
@@ -1363,13 +1321,13 @@ button img{
     font-weight: 500;
 }
 .project-sticky a{
-    padding: 15px 50px;
+    padding: 0.6rem 2.5rem;
     min-width: 150px;
     border-radius: 50px;
     border: 1px solid #2D2928;
     background-color: #ECF6F7;
     color: #2D2928;
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1457,7 +1415,7 @@ button img{
 .all-menu{
     position: fixed;
     width:300px;
-    padding:50px 30px;
+    padding:2.5rem 1.5rem;
     left:50%;
     top:50%;
     transform:translate(-50%,-50%)scale(0.7);
@@ -1491,20 +1449,20 @@ button img{
 /* 패키지 */
 
 .package-design-section {
-    padding: 100px 0;
+    padding: 5rem 0;
 }
 
 .inner-container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 2rem;
 }
 
 .section-number {
-    font-size: 80px;
+    font-size: 4rem;
     color: #cc3333;
     line-height: 1;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -1519,14 +1477,13 @@ button img{
 }
 
 .text-box {
-    width: 55%; 
     position: relative;
     z-index: 2; 
 }
 
 
 .description-text {
-    font-size: 15px;
+    font-size: 0.8rem;
     color: #555;
     line-height: 1.8;
     word-break: keep-all;
@@ -1575,8 +1532,8 @@ button img{
 /* 매트페인팅 */
 
 .video-section {
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 }
 
 
@@ -1595,14 +1552,14 @@ button img{
     font-size: 4rem;
     color: #BE3734;
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 
 .full-width-line {
     width: 100%;
     height: 1px;
-    margin-bottom: 80px; 
+    margin-bottom: 4rem; 
 }
 
 /* 콘텐츠 영역 (텍스트 & 영상) */
@@ -1616,17 +1573,16 @@ button img{
 .cursive-title {
     font-size: 6rem;
     color: #BE3734;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
 }
 
 .description-text {
-    font-size: 15px;
-    color: #555;
+    font-size: 1.25rem;
+    color: #2D2928;
     line-height: 1.8;
-    max-width: 800px; 
     word-break: keep-all; 
-    margin-bottom: 60px;
+    margin-bottom: 5rem;
 }
 
 /* 동영상 */
@@ -1677,26 +1633,46 @@ button img{
 }
 
 
+/* 반응형 디자인------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+@media (max-width: 1700px) {
+    .billboard-image {
+    width: 70%;
+}
+    .bncontent-section {
+    display: flex;
+    gap: 0;
+    flex-direction: column-reverse;
+}
+    .bncontent-section {
+        
+        align-items: start;
+    
+    }
+
+
+
+}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
+@media (max-width: 1920px) {
+    html{font-size: 20px;}
+}
 
 
 
 
 
 @media (max-width: 1440px) {
+html {font-size: 18px;}
 .kp-popup-showcase__info-panel {
     flex: 0 0 380px;
     border: 20px solid rgba(0,0,0,0.03);
@@ -1726,6 +1702,7 @@ button img{
         padding: 2rem 3rem;
         background-color: #ffffff;
     }
+
 }
 @media (max-width: 1280px) {
     .lace-style {
