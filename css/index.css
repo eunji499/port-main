@@ -1,6 +1,7 @@
 
 html {
     font-family: 'Suit',sans-serif;
+    color: #2D2928;
     background-color: #ECF6F7;
  }
         
@@ -625,11 +626,11 @@ button img{
             color: #BE3734;
             line-height: 1;
         }
-      .kp-popup-showcase__header-title {
+    .kp-popup-showcase__header-title {
         font-size: 6rem;
         color: #BE3734;
-
-}
+        margin-top: 2rem;
+    }
         .kp-popup-showcase__header-description {
             font-size: 1.25rem;
             color: #2D2928;
@@ -965,8 +966,8 @@ button img{
 .title {
     font-size: 6rem;
     color: #BE3734;
-    margin-bottom: 1rem;
-    
+    /* margin-bottom: 1rem; */
+    margin-top: 2rem;
 }
 
 .paragraph {
@@ -1085,7 +1086,7 @@ button img{
 }
 
 .detail h2+p{
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 }
 .detail h2+p+p{
     margin-bottom: 3rem;
@@ -1305,7 +1306,7 @@ button img{
     font-size:3rem;
     font-weight: 700;
     margin-bottom: 3rem;
-    color: #2D2928;
+    color: #BE3734;
 }
 .project-content h4+p{
     margin-bottom: 1.5rem;
@@ -1341,8 +1342,10 @@ button img{
 .contact{
     background-color: #b9d1d4;
     color:#2D2928;
-    padding:6rem 0 8rem;
+    padding:6rem 0 4rem;
     text-align: center;
+    border-top: 60px solid #b9d1d4;
+    border-image: url(../img/up-lace.png) 90 round;
 }
 .contact h1{
     font-size: calc(100vw / 11);
@@ -1359,6 +1362,7 @@ button img{
     font-weight: 700;
     margin-bottom: 3rem;
     margin-top: 3rem;
+    color: #BE3734;
 }
 .contact-menu{
     display: inline-flex;
@@ -1473,7 +1477,7 @@ button img{
     display: flex;
     align-items: center;
     min-height: 350px;
-    padding: 10rem 0rem 20rem 0;
+    /* padding: 10rem 0rem 20rem 0; */
 }
 
 .text-box {
@@ -1573,8 +1577,9 @@ button img{
 .cursive-title {
     font-size: 6rem;
     color: #BE3734;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
     line-height: 1.2;
+    margin-top: 2rem;
 }
 
 .description-text {
@@ -1639,7 +1644,7 @@ button img{
 
 
 
-@media (max-width: 1700px) {
+/* @media (max-width: 1700px) {
     .billboard-image {
     width: 70%;
 }
@@ -1656,23 +1661,21 @@ button img{
 
 
 
-}
+} */
 
 
 
 
 
 
-@media (max-width: 1920px) {
-    html{font-size: 20px;}
-}
+
 
 
 
 
 
 @media (max-width: 1440px) {
-html {font-size: 18px;}
+
 .kp-popup-showcase__info-panel {
     flex: 0 0 380px;
     border: 20px solid rgba(0,0,0,0.03);
@@ -1702,8 +1705,88 @@ html {font-size: 18px;}
         padding: 2rem 3rem;
         background-color: #ffffff;
     }
+    .skills-section h2 {
+    padding-left: 3rem; 
+}
+.kp-popup-showcase__header-description {
+    font-size: 1rem;
+    color: #2D2928;
+    width: 800px;
+}
+
+.kp-popup-showcase {
+    padding: 0;
+}
+
+.kp-popup-showcase__content {
+    margin: 4rem 0 10rem 0;
+}
+
+.glass-box {
+    left: 64%;
+    bottom: 2%;
+}
+
+.description {
+    font-size: 1rem;
+}
+.paragraph {
+    font-size: 1rem;
+}
+.bannermySwiper {
+    max-width: none;
+}
+.intro-box p {
+    font-size: 1rem;
+}
+.detail-grid {
+    margin: 2rem auto 10rem;
+}
+.description-text {
+    font-size: 1rem;
+    
+}
+.package-design-section {
+    padding: 10rem 0;
+}
+
+.package-Swiper {
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+.image-grid {
+    margin-bottom: 15rem;
+}
+
+
+.kp-popup-showcase__content {
+    overflow: hidden;
+}
+
+.button-container {
+    gap: 2rem;
+}
+
+.look-wrap {
+    margin: 35rem auto 0;
+}
+
+
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1280px) {
     .lace-style {
         border: 90px solid transparent;
@@ -1722,6 +1805,12 @@ html {font-size: 18px;}
     .look-wrap {
         margin: 40rem auto 0;
     }
+    .kp-popup-showcase__header-description {
+    width: 100%;
+}
+.about-text h2 {
+    font-size: 7rem;
+}
 }
 @media (max-width:1150px){
 
@@ -1764,6 +1853,8 @@ html {font-size: 18px;}
     align-self: stretch;
 }
 
+
+
 }
 
 /*  반응형 웹 디자인  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -1794,6 +1885,47 @@ html {font-size: 18px;}
         border-image: url(../img/lase-toll.png) 90 round;
         text-align: center;
     }
+    .content-text-container {
+    margin-bottom: 5rem;
+    
+}
+.kp-popup-showcase__header-title {
+    font-size: 4rem;
+    
+}
+
+.title {
+    font-size: 4rem;
+   
+}
+.cursive-title {
+    font-size: 4rem;}
+
+.Detail-title {
+    font-size: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 @media (max-width: 768px) {
