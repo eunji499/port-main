@@ -120,51 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// 웰컴 버튼 
-//         const btnConcept = document.getElementById('btnConcept');
-//         const btnColorsFonts = document.getElementById('btnColorsFonts');
-        
-//         const modalConcept = document.getElementById('modalConcept');
-//         const modalColorsFonts = document.getElementById('modalColorsFonts');
-        
-//         const closeConcept = document.getElementById('closeConcept');
-//         const closeColorsFonts = document.getElementById('closeColorsFonts');
 
-//         if (btnConcept && modalConcept && closeConcept) {
-//             btnConcept.addEventListener('click', () => modalConcept.classList.add('active'));
-//             closeConcept.addEventListener('click', () => modalConcept.classList.remove('active'));
-//         }
-        
-//         if (btnColorsFonts && modalColorsFonts && closeColorsFonts) {
-//             btnColorsFonts.addEventListener('click', () => modalColorsFonts.classList.add('active'));
-//             closeColorsFonts.addEventListener('click', () => modalColorsFonts.classList.remove('active'));
-//         }
-
-//         window.addEventListener('click', (event) => {
-//             if (modalConcept && event.target === modalConcept) modalConcept.classList.remove('active');
-//             if (modalColorsFonts && event.target === modalColorsFonts) modalColorsFonts.classList.remove('active');
-//         });
-
-//   const modal = document.getElementById("imageModal");
-//     const btn = document.getElementById("openModalBtn");
-//     const closeBtn = document.getElementsByClassName("close-btn")[0];
-
-//     // 버튼 클릭 시 모달 열기
-//     btn.onclick = function() {
-//       modal.style.display = "block";
-//     }
-
-//     // X 버튼 클릭 시 모달 닫기
-//     closeBtn.onclick = function() {
-//       modal.style.display = "none";
-//     }
-
-//     // 모달 배경 클릭 시 닫기
-//     window.onclick = function(event) {
-//       if (event.target == modal) {
-//         modal.style.display = "none";
-//       }
-//     }
 
 // --- [기존 코드 유지] ---
 const btnConcept = document.getElementById('btnConcept');
@@ -332,59 +288,6 @@ containers.forEach(container => new ElasticLine(container));
       moodTitle.innerText = activeSlide.getAttribute('data-mood');
     });
 
-    // // 3. 드래그 앤 드롭 및 이동 제한 구역 설정 로직
-    // const dragBox = document.getElementById('dragBox');
-    // const boundary = document.getElementById('boundary');
-
-    // if (dragBox && boundary) {
-    //     let isDragging = false;
-    //     let startX, startY, initialLeft, initialTop;
-
-    // // 마우스 누를 때 (드래그 시작)
-    // dragBox.addEventListener('mousedown', (e) => {
-    //   isDragging = true;
-    //   startX = e.clientX; // 마우스의 현재 X 좌표
-    //   startY = e.clientY; // 마우스의 현재 Y 좌표
-      
-    //   // 박스의 현재 CSS left, top 값 저장
-    //   initialLeft = dragBox.offsetLeft;
-    //   initialTop = dragBox.offsetTop;
-    // });
-
-    // // 마우스 움직일 때 (드래그 중)
-    // document.addEventListener('mousemove', (e) => {
-    //   if (!isDragging) return;
-
-    //   // 마우스가 이동한 거리 계산
-    //   const dx = e.clientX - startX;
-    //   const dy = e.clientY - startY;
-
-    //   // 이동할 새로운 좌표 계산
-    //   let newLeft = initialLeft + dx;
-    //   let newTop = initialTop + dy;
-
-    //   // 제한 구역 (Bounding Box) 설정: 컨테이너(boundary) 밖으로 나가지 못하게 조건문 추가
-    //   const maxLeft = boundary.clientWidth - dragBox.offsetWidth;
-    //   const maxTop = boundary.clientHeight - dragBox.offsetHeight;
-
-    //   // 좌우 끝값 제한
-    //   if (newLeft < 0) newLeft = 0;
-    //   if (newLeft > maxLeft) newLeft = maxLeft;
-
-    //   // 상하 끝값 제한
-    //   if (newTop < 0) newTop = 0;
-    //   if (newTop > maxTop) newTop = maxTop;
-
-    //   // 계산된 좌표를 실제 요소에 적용
-    //   dragBox.style.left = `${newLeft}px`;
-    //   dragBox.style.top = `${newTop}px`;
-    // });
-
-    //     // 마우스를 뗄 때 (드래그 종료)
-    //     document.addEventListener('mouseup', () => {
-    //       isDragging = false;
-    //     });
-    // }
 
 
 
@@ -425,50 +328,11 @@ containers.forEach(container => new ElasticLine(container));
 
 
 
-// 배너
-//   const bannerSlider = new Swiper(".banner-slider",{
-//                     autoplay:{
-//                         delay:3000
-//                     },
-//                     speed:1000,
-//                     loop:true
-//                 })
-
 
   
     
 
-// const track = document.getElementById('sliderTrack');
-// let isTransitioning = false; // 슬라이드가 넘어가는 도중인지 확인하는 변수
 
-// // 다음 슬라이드로 이동하는 함수
-// function moveToNextSlide() {
-//     // 이미 이동 중이라면 중복 실행 방지
-//     if (isTransitioning) return;
-//     isTransitioning = true;
-
-//     // 1. 애니메이션 설정 및 왼쪽으로 100% 이동
-//     track.style.transition = 'transform 1s ease';
-//     track.style.transform = 'translateX(-100%)';
-
-//     // 2. 애니메이션이 끝나는 시간(0.5초)에 맞춰 뒤처리 진행
-//     setTimeout(() => {
-//         // 애니메이션(트랜지션)을 잠깐 끕니다.
-//         track.style.transition = 'none';
-        
-//         // 맨 앞에 있던 첫 번째 슬라이드를 트랙의 맨 뒤로 이동시킵니다. (눈속임의 핵심)
-//         track.appendChild(track.firstElementChild);
-        
-//         // 트랙의 위치를 원래 자리(0)로 되돌립니다.
-//         // 첫 번째 슬라이드가 뒤로 갔으므로, 자연스럽게 두 번째 슬라이드가 화면에 보이게 됩니다.
-//         track.style.transform = 'translateX(0)';
-        
-//         isTransitioning = false; // 이동 상태 해제
-//     }, 500); // 500ms = 0.5초 (CSS transition 시간과 동일하게 맞춰야 합니다)
-// }
-
-// // 3초(3000ms)마다 자동으로 moveToNextSlide 함수를 실행
-// setInterval(moveToNextSlide, 3000);
 
 
     //  상세페이지
@@ -513,21 +377,36 @@ containers.forEach(container => new ElasticLine(container));
 
 
 
-// 페이지가 로드된 후 실행되도록 설정
-document.addEventListener('DOMContentLoaded', () => {
-    const envelope = document.getElementById('envelope');
-    const waxSeal = document.querySelector('.wax-seal');
 
-    // 열쇠(왁스 실)를 클릭했을 때
-    waxSeal.addEventListener('click', () => {
-        envelope.classList.add('opened');
-    });
 
-    // (선택 사항) 편지 내용을 다시 닫고 싶다면? 
-    // envelope.addEventListener('click', () => {
-    //     if(envelope.classList.contains('opened')) envelope.classList.remove('opened');
-    // });
-});
+
+        const projectContent = document.querySelectorAll('.project-content');
+
+        
+        const observer2 = new IntersectionObserver((entries) => {
+            console.log(entries[0].isIntersecting)
+            
+            // 1. 화면에 들어온 요소들 (isIntersecting === true)
+            const visibleEntries = entries.filter(entry => entry.isIntersecting);
+            visibleEntries.forEach((entry) => {
+                entry.target.classList.add('on');
+            });
+
+            // 2. 화면에서 벗어난 요소들 (isIntersecting === false)
+            const hiddenEntries = entries.filter(entry => !entry.isIntersecting);
+            hiddenEntries.forEach(entry => {
+                // ✨ 핵심: 화면 밖으로 나가면 'visible' 클래스를 제거하여 초기화합니다.
+                entry.target.classList.remove('on');
+            });
+
+        }, {
+            // 요소의 10%가 보일 때 감지 시작
+            threshold: 0.1 
+        });
+
+        projectContent.forEach(el => {
+            observer2.observe(el);
+        });
 
            
 

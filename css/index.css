@@ -1,4 +1,4 @@
-/* 외우지 말 것 */
+/* 공통 */
 ::-webkit-scrollbar{
     width: 0.2rem;
     height: 1rem;
@@ -43,14 +43,14 @@ html {
     scroll-behavior: smooth;
  }
         
-        /* 1. 초기 숨겨진 상태 설정 */
+        
         .fade-in-up {
-            opacity: 0; /* 완전히 투명하게 만듦 */
-            transform: translateY(50px); /* 원래 위치보다 50px 아래로 내려놓음 */
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* 0.8초 동안 부드럽게 변하도록 설정 */
+            opacity: 0; 
+            transform: translateY(50px); 
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
         }
 
-        /* 2. 화면에 나타날 때의 상태 설정 (JS가 이 클래스를 추가합니다) */
+        
       .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
@@ -107,41 +107,15 @@ html {
         header nav ul li a:hover {
             color: #BE3734; }
 
-    /* --- 1. PC 헤더 (#main-header) --- */
-/* #main-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background: #fff;
-    display: flex; /* 기본적으로 보임 */
-    /* justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000; */
 
-/* 
-#main-header ul {
-    display: flex;
-    gap: 20px; /* 메뉴 간격 */
-
-/* 
-#main-header ul li a {
-    font-size: 14px;
-    font-weight: bold;
-    transition: color 0.3s;
-} */ */
- */
-
-
-/* --- 2. 모바일 헤더 (.header-mobile) --- */
+/* 모바일 헤더 */
 .header-mobile {
     position: fixed;
     top: 0;
     width: 100%;
     height: 60px;
     background: #fff;
-    display: none; /* 기본적으로 숨김 (PC 우선) */
+    display: none; 
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
@@ -167,7 +141,7 @@ html {
     transition: 0.3s;
 }
 
-/* --- 3. 모바일 메뉴 (.mobile-nav) --- */
+/* 모바일 메뉴 */
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -183,7 +157,7 @@ html {
 }
 
 .mobile-nav.active {
-    right: 0; /* 클릭 시 등장 */
+    right: 0; 
 }
 
 .mobile-nav ul {
@@ -219,7 +193,7 @@ html {
 .header-mobile{
     display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 970px) {
     #main-header {
         display: none; 
     }
@@ -229,7 +203,7 @@ html {
         justify-content: space-between;
         padding: 2rem;
     }
-@media (min-width: 769px) {
+@media (min-width: 970px) {
     #main-header {
         display: flex; 
     }
@@ -350,8 +324,8 @@ figure .look {
             border-radius: 50px;
             padding: 0.5rem 6rem; 
             color: #2D2928; 
-            font-size: 0.85rem; 
-            font-weight: 600; 
+            font-size: 0.75rem; 
+            font-weight: 500; 
             letter-spacing: 0.5px;
             cursor: pointer; 
             transition: all 0.3s ease;
@@ -564,7 +538,7 @@ button img{
             background-color: #ffffff; 
             width: 1000px; 
             max-width: 95%; 
-            padding: 3rem 4rem; 
+            padding: 3rem 1rem; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transform: translateY(50px); 
             transition: transform 0.4s ease, opacity 0.4s ease;
@@ -671,8 +645,9 @@ button img{
         .font-name { 
             width: 120px; 
             font-weight: bold;
-             font-size: 1.1rem; 
-             color: #2D2928; 
+            font-size: 1.1rem; 
+            color: #2D2928;
+            text-align: center;
              }
         .font-desc { 
             width: 280px; 
@@ -1396,6 +1371,7 @@ button img{
 .detail-dl dt span{
     display: block;
     margin-bottom: 0.5rem;
+    color: #BE3734;
 }
 .detail-dl dd{
     margin-bottom: 3rem;
@@ -1477,7 +1453,7 @@ button img{
 }
 .project-content{
     background-color: #ECF6F7;
-    padding:6rem 0;
+    /* padding:6rem 0; */
     text-align: center;
     padding-bottom: 0;
 }
@@ -1497,18 +1473,36 @@ button img{
 .project-content h4+p{
     margin-bottom: 1.5rem;
 }
-.project-sticky{
+
+
+
+.project-sticky {
     display: flex;
     justify-content: center;
-    gap:1rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    position: sticky;
-    top:4rem;
+    gap: 0.3rem;
+    position: fixed;
+    top: 1rem;
+    flex-direction: column;
     font-weight: 500;
+    align-items: stretch;
+    right: 1rem;
+    width: 180px;
+    transform: translateX(calc(100% + 1rem));
+    transition: all 0.7s ease 0s;
 }
-.project-sticky a{
-    padding: 0.6rem 2.5rem;
+
+.project-content.on .project-sticky {
+    transform: translateX(0);
+}
+
+.project-detail{
+    margin-top: 3rem;
+}
+
+
+
+.project-sticky>li{
+    
     min-width: 150px;
     border-radius: 50px;
     border: 1px solid #2D2928;
@@ -1519,19 +1513,23 @@ button img{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.project-sticky a:hover{
+.project-sticky a{
+    display: block;
+    padding: 0.6rem 2.5rem;
+}
+.project-sticky li:hover{
     background-color: #BE3734;
     color: #ffffff;
     border-color: #BE3734;
 }
 
 .contact {
-    background-color: #b9d1d4;
+    background-color: #fdfdfd;
     color: #2D2928;
     padding: 0 0 4rem 0;
     text-align: center;
     border-top: 60px solid transparent;
-    border-image: url(../img/up-lace.png) 90 round;
+    border-image: url(../img/up-lace.png) 72 round;
     box-sizing: content-box;
     background-clip: padding-box;
 }
@@ -1562,11 +1560,11 @@ button img{
     padding:0.5rem 1.5rem;
     font-size: 0.8rem;
     font-weight: 500;
-    border:1px solid #fff;
+    border:1px solid #ECF6F7;
     border-radius: 100px;
 }
 .contact-menu a:hover{
-    background-color: #fff;
+    background-color: #d6e7f1;
     color:#000;
 }
 
@@ -1807,7 +1805,7 @@ button img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
 }
 
 .grid-item {
@@ -2116,9 +2114,10 @@ button img{
 }
 
 
-
 }
 
+
+/*  반응형 웹 디자인  -------------------------------------------------------------------------------------------------------------------------- */
 @media (max-width:1080px){
     .frame-inner {
         width: 480px;
@@ -2134,8 +2133,6 @@ button img{
 }
 
 
-
-/*  반응형 웹 디자인  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
     .frame-inner {
         padding: 3rem 0;
@@ -2163,6 +2160,12 @@ button img{
         font-size: 7rem;
         margin-top: 10rem;
 }
+
+.detail-dl {
+    width: 700px;
+    margin: 0 auto;
+}
+
 }
 
 @media (max-width:860px){
@@ -2238,7 +2241,7 @@ button img{
 }
 
 .ani1{
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .package-design-section {
@@ -2246,7 +2249,7 @@ button img{
 }
 
 .contact {
-    padding: 2rem 0 2rem;
+    padding: 0rem 0 2rem;
 }
 
 .kp-popup-showcase__info-description {
@@ -2256,9 +2259,27 @@ button img{
     font-size: 0.8rem;
 }
 
+
+.detail-dl {
+    width: 600px;
+    margin: 0 auto;
+}
+.icon-circle {
+    width: 80px;
+    height: 80px;
+}
+.visual-equation {
+    gap: 1rem;
 }
 
+}
+
+
+
 @media (max-width: 768px) {
+    .font-row {
+    flex-direction: column;
+}
     .kp-popup-showcase__header {
     padding: 0 1rem 3rem;
     
@@ -2438,7 +2459,38 @@ button img{
 
 }
 
+@media (max-width:640px){
+    .color-section {
+    flex-direction: column;
+    align-items: anchor-center;
+}
+    .detail-dl {
+    width: 450px;
+    margin: 0 auto;
+}
+.icon-circle {
+    width: 45px;
+    height: 45px;
+}
+
+}
+@media (max-width:450px){
+    .detail-dl {
+    width: 250px;
+    margin: 0 auto;
+}
+.color-section {
+    flex-direction: column;
+    align-items: anchor-center;
+}
+}
+
 @media (max-width:340px){
+    .font-desc {
+        width: 250px;
+        text-align: center;
+    }
+    
     .poster-mySwiper {
         width: 200px;
     }
@@ -2542,7 +2594,7 @@ button img{
     font-size: 2rem;
 }
 .common-frame .ani1 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     width: 200px;
     margin: 0.5rem auto;
 }
@@ -2566,7 +2618,6 @@ button img{
     font-size: 1.2rem;
 }
 
-
 }
 
 
@@ -2576,7 +2627,7 @@ button img{
 .parallax-key-container {
     position: absolute;
     /* top: 2px;  */
-    right: 10%;
+    right: 8%;
     z-index: 10;
     pointer-events: none; 
     transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
@@ -2584,7 +2635,7 @@ button img{
 
 .hanging-ribbon {
     width: 2px;
-    height: 300px;
+    height: 150px;
     background: #BE3734;
     margin: 0 auto;
 }
@@ -2601,7 +2652,7 @@ button img{
     50% { transform: rotate(5deg); }
 }
 
-.contact p{
+.contact .common-frame > :nth-child(2){
     padding-top: 5rem;
     width: auto;
 }
