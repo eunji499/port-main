@@ -2625,9 +2625,9 @@ button img{
 }
 
 .common-frame .ani1 {
-    font-size: 0.7rem;
-    width: 200px;
-    margin: 0 auto;
+    font-size: 0.9rem;
+    width: auto;
+    margin: 0.5rem 1rem;
 }
 
 .project-content .common-frame h4{
